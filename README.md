@@ -57,7 +57,7 @@ This will install all libraries necessary for the project.
 - Access the documentation to perform the package installation: 
   https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/
 
-- Open the terminal/cmd.
+- Open terminal/cmd.
 - In the terminal, run the command:
 
 `
@@ -66,7 +66,7 @@ pip install -r requirements.txt
 
 **Paths will be automatically mapped using Python’s pathlib library.**
 
-### 6. Running the Project
+### 6. Running Project
 
 - Open the terminal/cmd.
 - Access the project root directory (../featurestore).
