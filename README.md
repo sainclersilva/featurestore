@@ -51,20 +51,34 @@ This will install all libraries necessary for the project.
 
 - After creating the virtual environment, the project dependencies 
   can be installed from the requirements.txt file:
-
 - The "pip" command will be required for the steps below.
-
 - Access the documentation to perform the package installation: 
   https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/
 
-- Open terminal/cmd.
-- In the terminal, run the command:
+- Open the terminal/cmd.
+- Access the project root directory (../featurestore).
+- Verify if the directory contains the downloaded files.
+- Now, move one level down in the directory <../>.
+- To activate the project, type the following command:
+
+`
+featurestore/Scripts/activate
+`
+
+If the command runs successfully, the project name should appear in 
+parentheses at the beginning of the line, as shown below:
+
+`
+(featurestore) PS C:/Users...
+
+- Now, in the terminal, run the command:
 
 `
 pip install -r requirements.txt
 `
 
 **Paths will be automatically mapped using Python’s pathlib library.**
+
 
 ### 6. Running Project
 
