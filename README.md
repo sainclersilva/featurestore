@@ -86,7 +86,8 @@ pip install -r requirements.txt
 - Access the project root directory (../featurestore).
 - Verify if the directory contains the downloaded files.
 - Now move one level down in the directory <../>.
-- To activate the project, type the following command:
+- To activate the project, type the following command
+  (is no longer necessary if you have already done this in step 5):
 
 `
 featurestore/Scripts/activate
