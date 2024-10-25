@@ -4,155 +4,168 @@ Machine Learning - Feature Store Project - FastAPI
 
 ### 2. System Requirements
 
-- Python 3.12.7**: Ensure Python 3.12.7 is installed.
-- pip**: Python package installer (usually included with the Python installation).
-- Virtualenv**: (Optional, but recommended) to isolate dependencies.
-- PyCharm 2024.2.3** (recommended IDE) or VSCode
+- Python 3.12.7: Ensure that Python 3.12.7 is installed.
+- pip: Python package installer (usually included with Python installation).
+- Virtualenv: (Optional, but recommended) to isolate dependencies.
+- Terminal/cmd: after installing recommended packages from the requirements.txt file)
 
 ### 3. Installing Python 3.12.7
 
-If you do not have Python 3.12.7 installed, follow these instructions:
+- If you don’t already have Python 3.12.7 installed, follow these instructions:
 
-Windows/OS
+**Windows/OS**
 
 - Download Python 3.12.7 from the official website.
-- Run the installer and check the option "Add Python to PATH".
-- Verify if Python was installed correctly:
-
-### 4. Checking the Installed Version. Run the following command
+- Run the installer and check the "Add Python to PATH" option.
+- Verify if Python is correctly installed:
+- Run the command below:
 
 `
 $ python --version
 `
 
-### 5. Setting up the Project in PyCharm 2024.2.3 (VSCode may also be used)
+### 5. Setting Up the Project Before Running
 
-Follow the instructions below to set up the project in PyCharm:
+Follow the instructions below to set up the project:
 
-- Cloning the Repository
+**Clone the Repository**
 
-- First, clone the GitHub repository to your local environment.
-- In the PyCharm terminal or command line, run:
+- Download and install git on your computer and follow the steps 
+  on the page available at: https://git-scm.com/downloads
+- After installing git, open your computer's terminal/cmd.
+- Clone the GitHub repository to your local environment.
+- In the terminal/command line, type the command:
 
 `
 git clone https://github.com/sainclersilva/featurestore.git/
 `
 
-- Navigate to the project directory
+- Navigate to project directory
 
 `
-cd <cloned project path>
+.../featurestore/
 `
-
-### 6. Opening the Project in PyCharm 2024.2.3
-
-- Open PyCharm.
-- In the initial menu, click on File > Open.
-- Navigate to the directory of the cloned project and click OK.
-
-### 7. Creating a Virtual Environment in PyCharm
-
-- In PyCharm, open Settings (Ctrl+Alt+S or Cmd+, on Mac).
-- Go to Project: project-name > Python Interpreter.
-- In the top-right corner, click on the gear icon and select Add > Virtualenv Environment.
-- Choose New environment and click OK to create the virtual environment.
 
 ### 8. Installing Dependencies
+This will install all libraries necessary for the project.
 
-This will install all necessary libraries for the project.
+- After creating the virtual environment, the project dependencies 
+  can be installed from the requirements.txt file:
 
-- After creating the virtual environment, project dependencies can be installed 
-  from the **requirements.txt** file:
-- In PyCharm, open the integrated terminal (Alt+F12 or Cmd+Option+T on Mac).
+- The "pip" command will be required for the steps below.
+
+- Access the documentation to perform the package installation: 
+  https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/
+
+- Open the terminal/cmd.
 - In the terminal, run the command:
 
 `
 pip install -r requirements.txt
 `
 
-Paths will be automatically mapped through Python's pathlib library.
+**Paths will be automatically mapped using Python’s pathlib library.**
+
+### 6. Running the Project
+
+- Open the terminal/cmd.
+- Access the project root directory (../featurestore).
+- Verify if the directory contains the downloaded files.
+- Now move one level down in the directory <../>.
+- To activate the project, type the following command:
+
+`
+featurestore/Scripts/activate
+`
+
+If the command runs successfully, the project name should appear in 
+parentheses at the beginning of the line, as shown below:
+
+`
+(featurestore) PS C:/Users...
+`
 
 ### 9. Running the Project (Jupyter Notebook)
 
-To start the project and access the notebook via Jupyter, 
-run the command below in the integrated PyCharm terminal:
+To start the project and access the notebook through the Jupyter interface, 
+run the following command in the **terminal/cmd**.
+
+- Access the project directory (..\featurestore ).
+- The notebook for this project is in the featurestore.ipynb file.
+- Start Jupyter with the command below:
 
 `
-jupyter notebook
+jupyter notebook featurestore.ipynb
 `
 
-- Access the link generated after executing the command.
-- Then, open the feast_step.ipynb file **(http://localhost:8888/notebooks/featurestore.ipynb)**.
-- Now, simply execute each cell in the notebook to see the results.
-- At the end of the notebook, instructions for interacting with the API will be provided.
+- Access the link generated after executing the command 
+  **http://localhost:8888/notebooks/featurestore.ipynb**.
+
+- Now execute each notebook command to see the results.
+- At the end of the notebook, there will be instructions 
+  for interacting with the API.
 
 ![Notebook em execução](images/notebook.png)
 
-### 10. Running API - FastAPI and Swagger Documentation
 
-- Run the following command in the PyCharm integrated terminal (ensure you are in the project's 
-<api> directory, where the API's main.py file is located)
+### 10. Run API - FastAPI and Swagger Documentation
+
+- Open another terminal.
+- Access the project directory and enter the API folder (..featurestore\api).
+- Run the following command in the terminal/cmd 
+  (make sure you are in the project’s <api> directory, where the API's main.py file is located).
 
 `
 uvicorn main:app --reload --port 8080
 `
 
+- Access the API's Swagger documentation in your browser at: http://127.0.0.1:8080/docs
+- You can interact with the API through the interface at the previous link.
+
 ![Start API](images/startapi.png)
 
-
-- Access the API's Swagger documentation in your browser at: **http://127.0.0.1:8080/docs**
-- You can interact with the API through the previous link's interface.
-
+- After executing the consumers or restaurant request, the data will be returned:
 
 ![Request Consumers](images/api-consumers.png)
-
 
 ![Request Restaurants](images/api-restaurants.png)
 
 
 ### 11. AWS Architecture
 
-- The architecture diagram is available in the **diagram** directory.
-- There are two diagrams that describe a possible architecture to support the project.
+- The architecture diagram is available in the diagram directory.
+- There are two diagrams that describe a potential architecture to support the project.
+- Below is a description of the resources that may be considered for the AWS Infrastructure:
 
-![Suggested Diagram 1](diagram/diagram-a.png)
+- 1. Amazon SageMaker Feature Store:
+  For storage, retrieval, and versioning of features.
 
-![Suggested Diagram 2](diagram/diagram-b.png)
+- 2. Amazon S3:
+  To store large volumes of historical data and files for batch training.
 
-Below is a description of the resources that can be considered with AWS Infrastructure:
+- 3. Amazon Redshift:
+  To enable complex SQL analyses of features.
 
-### 1. Amazon SageMaker Feature Store:
-- For feature storage, retrieval, and versioning.
+- 4. Amazon DynamoDB:
+  A NoSQL database for real-time feature retrieval with low latency, ideal for model inference.
 
-### 2. Amazon S3:
-- To store large volumes of historical data and batch training files.
+- 5. AWS Glue:
+  A serverless ETL service to prepare, clean, and transform data into features, with batch and streaming support.
 
-### 3. Amazon Redshift:
-- To enable complex SQL analyses of features.
+- 6. Amazon RDS:
+  Managed SQL databases for storing and querying relational features for models like consumers and restaurants.
 
-### 4. Amazon DynamoDB:
-- NoSQL database for real-time feature retrieval with low latency, 
-for model inference.
+- 7. Amazon Kinesis:
+  For real-time data ingestion (streaming, logs, metrics, etc.).
 
-### 5. AWS Glue:
-- Serverless ETL service to prepare, clean, and transform data into features, 
-supporting batch and streaming.
+- 8. Amazon EMR:
+  For large-scale data processing with Spark, Hadoop, and distributed analysis tools.
 
-### 6. Amazon RDS:
-- Managed SQL databases for storing and querying relational features 
-for models like consumers and restaurants.
+- 9. AWS Lambda:
+  To run serverless functions in response to events and to transform features before ingestion.
 
-### 7. Amazon Kinesis:
-- For real-time data ingestion (streaming, logs, metrics, etc.).
-
-### 8. Amazon EMR:
-- To process large-scale data with Spark, Hadoop, and distributed analytics tools.
-
-### 9. AWS Lambda:
-- To execute serverless functions in response to events; transforms features before to ingestion.
-
-### 10. AWS IAM and KMS (Security):
-- IAM to manage access; KMS for encryption resources.
+- 10. AWS IAM and KMS (Security):
+  IAM to manage access, KMS for encryption resources.
 
 -----------------------------------------------------------------------
 -----------------------------------------------------------------------
@@ -166,7 +179,8 @@ Machine Learning - Feature Store Project - FastAPI
 - Python 3.12.7**: Certifique-se de ter o Python 3.12.7 instalado. 
 - pip**: Instalador de pacotes do Python (geralmente já vem com a instalação do Python).
 - Virtualenv**: (Opcional, mas recomendado) para isolar dependências.
-- PyCharm 2024.2.3** (IDE recomendada) ou VSCode
+- PyCharm 2024.2.3** (IDE recomendada, mas realizar a execução via Terminal após instalar 
+  pacotes recomendados no arquivo requirements.txt) ou VSCode
 
 
 ### 3. Instalando o Python 3.12.7
@@ -184,13 +198,17 @@ Windows/OS
 $ python --version
 `
 
-### 5. Configurando o Projeto no PyCharm 2024.2.3 (pode usar VSCode também)
-Siga as instruções abaixo para configurar o projeto no **PyCharm**:
+### 5. Configurando o Projeto antes da execução
+Siga as instruções abaixo para configurar o projeto:
 
 Clonando o Repositório
 
-- Primeiro, clone o repositório do GitHub para o seu ambiente local. 
-- No terminal do PyCharm ou na linha de comando, execute:
+- Baixe e instale o git em seu computador e siga os procedimentos 
+  conforme página disponível em: **https://git-scm.com/downloads**
+
+- Após instalar o git, abra o terminal/cmd do seu computador
+- Clone o repositório do GitHub para o seu ambiente local. 
+- No terminal /linha de comando, digite o comando:
 
 `
 git clone https://github.com/sainclersilva/featurestore.git/
@@ -202,26 +220,17 @@ git clone https://github.com/sainclersilva/featurestore.git/
 cd <caminho do projeto clonado>
 `
 
-### 6. Abrindo o Projeto no PyCharm 2024.2.3
-
-- Abra o PyCharm.
-- No menu inicial, clique em File > Open.
-- Navegue até o diretório do projeto que você clonou e clique em OK.
-
-### 7. Criando um Ambiente Virtual no PyCharm
-
-- No PyCharm, abra o Settings (Ctrl+Alt+S ou Cmd+, no Mac).
-- Navegue até Project: nome-do-projeto > Python Interpreter.
-- No canto superior direito, clique no ícone de engrenagem e selecione Add > Virtualenv Environment.
-- Escolha New environment e clique em OK para criar o ambiente virtual.
-
-
 ### 8. Instalando as Dependências
 Isso instalará todas as bibliotecas necessárias para o projeto.
 
 - Após a criação do ambiente virtual, as dependências do projeto podem 
   ser instaladas a partir do arquivo **requirements.txt**:
-- No PyCharm, abra o terminal integrado (Alt+F12 ou Cmd+Option+T no Mac).
+
+- Será necessário usar o comando "pip" para os passos abaixo
+- Acesse a documentação para realizar a instalação do pacote: 
+  https://packaging.python.org/pt-br/latest/guides/installing-using-pip-and-virtual-environments/
+
+- Abra o terminal/cmd
 - No terminal, execute o comando:
 
 `
@@ -230,27 +239,53 @@ pip install -r requirements.txt
 
 - Os paths serão mapeados automaticamente através da lib pathlib do Python
 
+
+### 6. Executando o Projeto
+
+- Abra o terminal/cmd
+- Acesse o repositório raiz do projeto (exemplo: <**local no disco>/featurestore**)
+- Verifique se o diretório possui os arquivos baixados
+- Agora desça um nível do diretório <**local no disco**>
+- Para ativar o projeto, digite o seguinte comando: 
+
+`
+featurestore/Scripts/activate
+`
+
+- Se o comando der certo, deve aparecer o nome do projeto 
+  entre parênteses no inicio da linha conforme exemplo abaixo:
+
+`
+(featurestore) PS C:/Users... 
+`
+
 ### 9. Executando o projeto (Notebook Jupter)
 
 - Para iniciar o projeto e acessar o notebook através da interface do jupter,
-execute o comando abaixo no terminal integrado ao PyCharm
+execute o comando abaixo no terminal/cmd
+
+- Acesse o diretório do projeto (..\featurestore )
+- O notebook deste projeto está no arquivo featurestore.ipynb
+- Vamos iniciar o jupter com o comando abaixo:
 
 `
-jupyter notebook
+ jupyter notebook featurestore.ipynb
 `
 
 - Acesse o link gerado após execução do comando
-- Depois acesse o arquivo **feast_step.ipynb** (http://localhost:8888/notebooks/featurestore.ipynb)
+  (http://localhost:8888/notebooks/featurestore.ipynb)
 - Agora é só executar cada comando do notebook para ver os resultados
 - Ao fim do notebook haverá as instruções para interagir com a API.
 
-![Texto Alternativo](https://github.com/sainclersilva/featurestore/tree/main/images/notebook.png)
+![Notebook](https://github.com/sainclersilva/featurestore/tree/main/images/notebook.png)
 
 
 ### 10. Executar API - FastAPI e Documentação Swagger
 
-- Execute o comando abaixo no terminal integrado do PyCharm
-  (certique-se de estar no diretório <api> do projeto, onde se encontra o arquivo *main.py* da API)
+- Abra outro terminal
+- Acesse o diretório do projeto e entre na pasta api (..featurestore\api)
+- Execute o comando abaixo no terminal/cmd
+  (certifique-se de estar no diretório <api> do projeto,onde se encontra o arquivo *main.py* da API)
 
 `
 uvicorn main:app --reload --port 8080
