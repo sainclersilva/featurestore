@@ -103,13 +103,13 @@ uvicorn main:app --reload --port 8080
 - Access the API's Swagger documentation in your browser at: **http://127.0.0.1:8080/docs**
 - You can interact with the API through the previous link's interface.
 
-![Status API](images/startingapi.png)
+![Status API](images/startapi.png)
 
 
-![Request Consumers](images/consumers-api.png)
+![Request Consumers](images/api-consumers.png)
 
 
-![Request Consumers](images/restaurants-api.png)
+![Request Restaurants](images/api-restaurants.png)
 
 
 ### 11. AWS Architecture
