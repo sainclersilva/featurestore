@@ -120,6 +120,7 @@ uvicorn main:app --reload --port 8080
 ![Suggested Diagram 2](diagram/diagram-b.png)
 
 Below is a description of the resources that can be considered with AWS Infrastructure:
+
 ### 1. Amazon SageMaker Feature Store:
 - For feature storage, retrieval, and versioning.
 
@@ -265,41 +266,40 @@ uvicorn main:app --reload --port 8080
 
 ### Abaixo descrição dos recursos que podem ser considerados com Infra AWS:
 
-###1. Amazon SageMaker Feature Store: 
+### 1. Amazon SageMaker Feature Store: 
 Para armazenamento, recuperação e versionamento de features
 
-###2. Amazon S3: 
+### 2. Amazon S3: 
 Para armazenar grandes volumes de dados históricos e arquivos para treinos em batch
 
-###3. Amazon Redshift: 
+### 3. Amazon Redshift: 
 Para permitir análises SQL complexas de features
 
-###3. Amazon DynamoDB: 
+### 4. Amazon DynamoDB: 
 Banco de dados NoSQL para recuperar features em tempo real com latência baixa, 
 ideal para inferência de modelos.
 
-###3. AWS Glue: 
+### 5. AWS Glue: 
 Serviço de ETL serverless para preparar, limpar e transformar dados em features, 
 com suporte a batch e streaming.
 
-###4. Amazon RDS: 
+### 6. Amazon RDS: 
 Bancos SQL gerenciados para armazenamento e consulta de features relacionais aos 
 modelos como consumers e restaurants.
 
-###5. Amazon Kinesis: 
+### 7. Amazon Kinesis: 
 Para ingestão de dados em tempo real (streaming, logs, métricas, etc)
 
-###6. Amazon EMR: 
+### 8. Amazon EMR: 
 Para processar dados em larga escala com Spark, Hadoop, 
 e ferramentas de análise distribuída.
 
-###7. AWS Lambda: 
+### 9. AWS Lambda: 
 Para execução de funções serverless em resposta a eventos
 Para transformar features antes da ingestão.
 
-###8. AWS IAM e KMS (Segurança): 
+### 10. AWS IAM e KMS (Segurança): 
 IAM para gerenciar acessos
 KMS para recursos de criptografia
 
-
-### -------------------------------------------------------------- ###
+--------------------------------------------------------------
