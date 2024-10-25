@@ -154,7 +154,8 @@ for models like consumers and restaurants.
 - IAM to manage access; KMS for encryption resources.
 
 -----------------------------------------------------------------------
-
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
 
 ### 1. Informações do projeto
 Machine Learning - Feature Store Project - FastAPI
