@@ -86,6 +86,8 @@ jupyter notebook
 - Now, simply execute each cell in the notebook to see the results.
 - At the end of the notebook, instructions for interacting with the API will be provided.
 
+![Notebook em execução](images/notebook.png)
+
 ### 10. Running the API - FastAPI and Swagger Documentation
 
 - Run the following command in the PyCharm integrated terminal (ensure you are in the project's 
