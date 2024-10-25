@@ -298,8 +298,6 @@ execute o comando abaixo no terminal/cmd
 - Agora é só executar cada comando do notebook para ver os resultados
 - Ao fim do notebook haverá as instruções para interagir com a API.
 
-![Notebook](https://github.com/sainclersilva/featurestore/tree/main/images/notebook.png)
-
 
 ### 9. Executar API - FastAPI e Documentação Swagger
 
