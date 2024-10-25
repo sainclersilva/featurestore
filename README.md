@@ -70,6 +70,7 @@ parentheses at the beginning of the line, as shown below:
 
 `
 (featurestore) PS C:/Users...
+`
 
 - Now, in the terminal, run the command:
 
