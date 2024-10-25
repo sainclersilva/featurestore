@@ -24,7 +24,7 @@ Machine Learning - Feature Store Project - FastAPI
 $ python --version
 `
 
-### 4. Setting Up the Project Before Running
+### 4. Setup Project Before Running
 
 Follow the instructions below to set up the project:
 
