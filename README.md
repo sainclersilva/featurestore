@@ -29,16 +29,16 @@ $ python --version
 
 Follow the instructions below to set up the project in PyCharm:
 
-Cloning the Repository
+- Cloning the Repository
 
-First, clone the GitHub repository to your local environment.
-In the PyCharm terminal or command line, run:
+- First, clone the GitHub repository to your local environment.
+- In the PyCharm terminal or command line, run:
 
 `
 git clone https://github.com/sainclersilva/featurestore.git/
 `
 
-b. Navigate to the project directory
+- Navigate to the project directory
 
 `
 cd <cloned project path>
@@ -88,7 +88,7 @@ jupyter notebook
 
 ### 10. Running the API - FastAPI and Swagger Documentation
 
-Run the following command in the PyCharm integrated terminal (ensure you are in the project's 
+- Run the following command in the PyCharm integrated terminal (ensure you are in the project's 
 <api> directory, where the API's main.py file is located)
 
 `
@@ -100,9 +100,8 @@ uvicorn main:app --reload --port 8080
 
 ### 11. AWS Architecture
 
-The architecture diagram is available in the **diagram** directory.
-There are two diagrams that describe a possible architecture to support the project.
-
+- The architecture diagram is available in the **diagram** directory.
+- There are two diagrams that describe a possible architecture to support the project.
 
 
 -----------------------------------------------------------------------
@@ -193,6 +192,9 @@ jupyter notebook
 - Depois acesse o arquivo **feast_step.ipynb** (http://localhost:8888/notebooks/featurestore.ipynb)
 - Agora é só executar cada comando do notebook para ver os resultados
 - Ao fim do notebook haverá as instruções para interagir com a API.
+
+<img src="https://github.com/sainclersilva/featurestore/tree/main/images/notebook.png" alt="Notebook execução">
+
 
 ### 10. Executar API - FastAPI e Documentação Swagger
 
