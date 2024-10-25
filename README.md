@@ -97,13 +97,29 @@ jupyter notebook
 uvicorn main:app --reload --port 8080
 `
 
+![Start API](images/startapi.png)
+
+
 - Access the API's Swagger documentation in your browser at: **http://127.0.0.1:8080/docs**
 - You can interact with the API through the previous link's interface.
+
+![Status API](images/startingapi.png)
+
+
+![Request Consumers](images/consumers-api.png)
+
+
+![Request Consumers](images/restaurants-api.png)
+
 
 ### 11. AWS Architecture
 
 - The architecture diagram is available in the **diagram** directory.
 - There are two diagrams that describe a possible architecture to support the project.
+
+![Suggested Diagram 1](diagram/diagram-a.png)
+
+![Suggested Diagram 2](diagram/diagram-b.png)
 
 
 -----------------------------------------------------------------------
