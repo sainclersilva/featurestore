@@ -24,7 +24,7 @@ Machine Learning - Feature Store Project - FastAPI
 $ python --version
 `
 
-### 5. Setting Up the Project Before Running
+### 4. Setting Up the Project Before Running
 
 Follow the instructions below to set up the project:
 
@@ -46,7 +46,7 @@ git clone https://github.com/sainclersilva/featurestore.git/
 .../featurestore/
 `
 
-### 8. Installing Dependencies
+### 5. Installing Dependencies
 This will install all libraries necessary for the project.
 
 - After creating the virtual environment, the project dependencies 
@@ -85,7 +85,7 @@ parentheses at the beginning of the line, as shown below:
 (featurestore) PS C:/Users...
 `
 
-### 9. Running the Project (Jupyter Notebook)
+### 7. Running the Project (Jupyter Notebook)
 
 To start the project and access the notebook through the Jupyter interface, 
 run the following command in the **terminal/cmd**.
@@ -108,7 +108,7 @@ jupyter notebook featurestore.ipynb
 ![Notebook em execução](images/notebook.png)
 
 
-### 10. Run API - FastAPI and Swagger Documentation
+### 8. Run API - FastAPI and Swagger Documentation
 
 - Open another terminal.
 - Access the project directory and enter the API folder (..featurestore\api).
@@ -131,40 +131,40 @@ uvicorn main:app --reload --port 8080
 ![Request Restaurants](images/api-restaurants.png)
 
 
-### 11. AWS Architecture
+### 9. AWS Architecture
 
 - The architecture diagram is available in the diagram directory.
 - There are two diagrams that describe a potential architecture to support the project.
 - Below is a description of the resources that may be considered for the AWS Infrastructure:
 
-- 1. Amazon SageMaker Feature Store:
+- a. Amazon SageMaker Feature Store:
   For storage, retrieval, and versioning of features.
 
-- 2. Amazon S3:
+- b. Amazon S3:
   To store large volumes of historical data and files for batch training.
 
-- 3. Amazon Redshift:
+- c. Amazon Redshift:
   To enable complex SQL analyses of features.
 
-- 4. Amazon DynamoDB:
+- d. Amazon DynamoDB:
   A NoSQL database for real-time feature retrieval with low latency, ideal for model inference.
 
-- 5. AWS Glue:
+- e. AWS Glue:
   A serverless ETL service to prepare, clean, and transform data into features, with batch and streaming support.
 
-- 6. Amazon RDS:
+- f. Amazon RDS:
   Managed SQL databases for storing and querying relational features for models like consumers and restaurants.
 
-- 7. Amazon Kinesis:
+- g. Amazon Kinesis:
   For real-time data ingestion (streaming, logs, metrics, etc.).
 
-- 8. Amazon EMR:
+- h. Amazon EMR:
   For large-scale data processing with Spark, Hadoop, and distributed analysis tools.
 
-- 9. AWS Lambda:
+- i. AWS Lambda:
   To run serverless functions in response to events and to transform features before ingestion.
 
-- 10. AWS IAM and KMS (Security):
+- j. AWS IAM and KMS (Security):
   IAM to manage access, KMS for encryption resources.
 
 -----------------------------------------------------------------------
@@ -220,7 +220,7 @@ git clone https://github.com/sainclersilva/featurestore.git/
 cd <caminho do projeto clonado>
 `
 
-### 8. Instalando as Dependências
+### 6. Instalando as Dependências
 Isso instalará todas as bibliotecas necessárias para o projeto.
 
 - Após a criação do ambiente virtual, as dependências do projeto podem 
@@ -240,7 +240,7 @@ pip install -r requirements.txt
 - Os paths serão mapeados automaticamente através da lib pathlib do Python
 
 
-### 6. Executando o Projeto
+### 7. Executando o Projeto
 
 - Abra o terminal/cmd
 - Acesse o repositório raiz do projeto (exemplo: <**local no disco>/featurestore**)
@@ -259,7 +259,7 @@ featurestore/Scripts/activate
 (featurestore) PS C:/Users... 
 `
 
-### 9. Executando o projeto (Notebook Jupter)
+### 8. Executando o projeto (Notebook Jupter)
 
 - Para iniciar o projeto e acessar o notebook através da interface do jupter,
 execute o comando abaixo no terminal/cmd
@@ -280,7 +280,7 @@ execute o comando abaixo no terminal/cmd
 ![Notebook](https://github.com/sainclersilva/featurestore/tree/main/images/notebook.png)
 
 
-### 10. Executar API - FastAPI e Documentação Swagger
+### 9. Executar API - FastAPI e Documentação Swagger
 
 - Abra outro terminal
 - Acesse o diretório do projeto e entre na pasta api (..featurestore\api)
@@ -294,46 +294,46 @@ uvicorn main:app --reload --port 8080
 - Acesse a documentação Swagger da API no navegador em: http://127.0.0.1:8080/docs
 - Pode-se interagir com a API através da interface do link anterior.
 
-### 11. Arquitetura AWS
+### 10. Arquitetura AWS
 
 - O desenho da arquitetura está disponível no diretório **diagram**
 - Existem dois desenhos que descrevem uma possível arquitetura para atender o projeto
 
 ### Abaixo descrição dos recursos que podem ser considerados com Infra AWS:
 
-### 1. Amazon SageMaker Feature Store: 
+- a. Amazon SageMaker Feature Store: 
 Para armazenamento, recuperação e versionamento de features
 
-### 2. Amazon S3: 
+- b. Amazon S3: 
 Para armazenar grandes volumes de dados históricos e arquivos para treinos em batch
 
-### 3. Amazon Redshift: 
+- c. Amazon Redshift: 
 Para permitir análises SQL complexas de features
 
-### 4. Amazon DynamoDB: 
+- d. Amazon DynamoDB: 
 Banco de dados NoSQL para recuperar features em tempo real com latência baixa, 
 ideal para inferência de modelos.
 
-### 5. AWS Glue: 
+- e. AWS Glue: 
 Serviço de ETL serverless para preparar, limpar e transformar dados em features, 
 com suporte a batch e streaming.
 
-### 6. Amazon RDS: 
+- f. Amazon RDS: 
 Bancos SQL gerenciados para armazenamento e consulta de features relacionais aos 
 modelos como consumers e restaurants.
 
-### 7. Amazon Kinesis: 
+- g. Amazon Kinesis: 
 Para ingestão de dados em tempo real (streaming, logs, métricas, etc)
 
-### 8. Amazon EMR: 
+- h. Amazon EMR: 
 Para processar dados em larga escala com Spark, Hadoop, 
 e ferramentas de análise distribuída.
 
-### 9. AWS Lambda: 
+- i. AWS Lambda: 
 Para execução de funções serverless em resposta a eventos
 Para transformar features antes da ingestão.
 
-### 10. AWS IAM e KMS (Segurança): 
+- j. AWS IAM e KMS (Segurança): 
 IAM para gerenciar acessos
 KMS para recursos de criptografia
 
