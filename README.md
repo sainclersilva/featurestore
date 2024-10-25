@@ -88,7 +88,7 @@ jupyter notebook
 
 ![Notebook em execução](images/notebook.png)
 
-### 10. Running the API - FastAPI and Swagger Documentation
+### 10. Running API - FastAPI and Swagger Documentation
 
 - Run the following command in the PyCharm integrated terminal (ensure you are in the project's 
 <api> directory, where the API's main.py file is located)
@@ -119,6 +119,39 @@ uvicorn main:app --reload --port 8080
 
 ![Suggested Diagram 2](diagram/diagram-b.png)
 
+Below is a description of the resources that can be considered with AWS Infrastructure:
+### 1. Amazon SageMaker Feature Store:
+- For feature storage, retrieval, and versioning.
+
+### 2. Amazon S3:
+- To store large volumes of historical data and batch training files.
+
+### 3. Amazon Redshift:
+- To enable complex SQL analyses of features.
+
+### 4. Amazon DynamoDB:
+- NoSQL database for real-time feature retrieval with low latency, 
+for model inference.
+
+### 5. AWS Glue:
+- Serverless ETL service to prepare, clean, and transform data into features, 
+supporting batch and streaming.
+
+### 6. Amazon RDS:
+- Managed SQL databases for storing and querying relational features 
+for models like consumers and restaurants.
+
+### 7. Amazon Kinesis:
+- For real-time data ingestion (streaming, logs, metrics, etc.).
+
+### 8. Amazon EMR:
+- To process large-scale data with Spark, Hadoop, and distributed analytics tools.
+
+### 9. AWS Lambda:
+- To execute serverless functions in response to events; transforms features before to ingestion.
+
+### 10. AWS IAM and KMS (Security):
+- IAM to manage access; KMS for encryption resources.
 
 -----------------------------------------------------------------------
 
@@ -228,5 +261,44 @@ uvicorn main:app --reload --port 8080
 
 - O desenho da arquitetura está disponível no diretório **diagram**
 - Existem dois desenhos que descrevem uma possível arquitetura para atender o projeto
+
+### Abaixo descrição dos recursos que podem ser considerados com Infra AWS:
+
+###1. Amazon SageMaker Feature Store: 
+Para armazenamento, recuperação e versionamento de features
+
+###2. Amazon S3: 
+Para armazenar grandes volumes de dados históricos e arquivos para treinos em batch
+
+###3. Amazon Redshift: 
+Para permitir análises SQL complexas de features
+
+###3. Amazon DynamoDB: 
+Banco de dados NoSQL para recuperar features em tempo real com latência baixa, 
+ideal para inferência de modelos.
+
+###3. AWS Glue: 
+Serviço de ETL serverless para preparar, limpar e transformar dados em features, 
+com suporte a batch e streaming.
+
+###4. Amazon RDS: 
+Bancos SQL gerenciados para armazenamento e consulta de features relacionais aos 
+modelos como consumers e restaurants.
+
+###5. Amazon Kinesis: 
+Para ingestão de dados em tempo real (streaming, logs, métricas, etc)
+
+###6. Amazon EMR: 
+Para processar dados em larga escala com Spark, Hadoop, 
+e ferramentas de análise distribuída.
+
+###7. AWS Lambda: 
+Para execução de funções serverless em resposta a eventos
+Para transformar features antes da ingestão.
+
+###8. AWS IAM e KMS (Segurança): 
+IAM para gerenciar acessos
+KMS para recursos de criptografia
+
 
 ### -------------------------------------------------------------- ###
