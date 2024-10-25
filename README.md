@@ -152,6 +152,11 @@ uvicorn main:app --reload --port 8080
 - There are two diagrams that describe a potential architecture to support the project.
 - Below is a description of the resources that may be considered for the AWS Infrastructure:
 
+![Diagram](diagram/diagram-a.png)
+
+![Diagram](diagram/diagram-b.png)
+
+
 - a. Amazon SageMaker Feature Store:
   For storage, retrieval, and versioning of features.
 
